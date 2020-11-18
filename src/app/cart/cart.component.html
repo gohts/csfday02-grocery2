@@ -1,0 +1,13 @@
+<h3>My Cart</h3>
+<table class="table">
+    <tr *ngFor="let item of cartItems">
+        <td class="align-middle" *ngIf="item.quantity > 0">
+            <img src="{{item.imageUrl}}" alt="">
+        </td>
+        <td class="align-middle" *ngIf="item.quantity > 0">{{item.name}}</td>
+        <td class="align-middle" *ngIf="item.quantity > 0">{{item.quantity}}</td>
+        <td class="align-middle" *ngIf="item.quantity > 0">
+            <button class="btn btn-primary" (click)=removeItem(item)>Remove</button>
+        </td>
+    </tr>
+</table>
